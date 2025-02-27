@@ -9,7 +9,7 @@ console.log(5 > 1 || 5 > 10); // true
 console.log(5 > 1 && 5 > 10); // false
 
 // || - return first true value
-console.log("10" || "" || null || undefined); // return first true: 10
+console.log("10" || "" || null || undefined); // return first true: "10"
 // && - return first false value
 console.log("10" && "false" && null && undefined); // return first false: null
 
