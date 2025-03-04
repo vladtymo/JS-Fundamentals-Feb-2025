@@ -1,0 +1,11 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    background-color: darkgray;
+    text-transform: uppercase;
+    border-radius: 6px;
+    padding: 10px;
+}
