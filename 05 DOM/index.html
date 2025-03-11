@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Document Object Model (<abbr>DOM</abbr>)</h1>
+    <p>The Document Object Model is a cross-platform and language-independent interface that treats an HTML or XML
+        document as a tree structure wherein each node is an object representing a part of the document. The DOM
+        represents a document with a logical tree.</p>
+
+    <!-- Emmet: p[title="List Header"] -->
+    <p title="List Header">Using DOM methods and properties, a user can:</p>
+
+    <!-- Emmet: ul>li* -->
+
+    <ul id="main-list" class="my-list">
+
+        Text Element
+        <li>Modify HTML elements on the page</li>
+        Text Element
+        <li>Modify attributes</li>
+        <li id="third-item" class="important">
+            Change <abbr>CSS</abbr> <i style="display: none;">Super</i> styles
+        </li>
+        <li class="important">Delete existing HTML elements and attributes</li>
+        <li>Add new HTML elements and attributes</li>
+        <li>Respond to user actions against HTML elements</li>
+        <li>Create new events</li>
+
+    </ul>
+
+
+    <p>DOM methods are actions you can perform (on HTML Elements).</p>
+    <p>DOM properties are values (of HTML Elements) that you can set or change.</p>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

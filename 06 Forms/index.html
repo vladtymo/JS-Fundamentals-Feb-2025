@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>My Shop</h1>
+
+    <h3>Create New Product</h3>
+    <form name="creationForm">
+        <div>
+            <label>
+                <span>Name:</span>
+                <input name="name" type="text" placeholder="Enter product name">
+            </label>
+            <label>
+                <span>Price:</span>
+                <input name="price" type="number" placeholder="Enter product price">
+            </label>
+        </div>
+        <div class="mt">
+            <label>
+                <span>In Stock:</span>
+                <input name="status" type="checkbox">
+            </label>
+        </div>
+        <div class="mt">
+            <button id="createBtn" type="submit">Create</button>
+            <button type="reset">Cancel</button>
+        </div>
+    </form>
+
+    <h3>Product Catalog</h3>
+    <table id="productTable">
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Status</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>iPhone X</td>
+                <td>450$</td>
+                <td>In Stock</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Watch 5</td>
+                <td>122$</td>
+                <td>In Stock</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>HP Probook</td>
+                <td>1230$</td>
+                <td>Out of Stock</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mt">
+        <button id="clearBtn" type="button">Clear All</button>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
