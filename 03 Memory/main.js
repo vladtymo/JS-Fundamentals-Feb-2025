@@ -13,7 +13,7 @@ console.log(c); // 10
 console.log(number);
 
 let user = { id: 1001, login: 'super' }; // memory allocation [0x4667] -> {...}
-let admin = user; // assign reference
+let admin = user; // copy reference
 
 user.id++;             // 1002
 console.log(admin.id); // 1002
