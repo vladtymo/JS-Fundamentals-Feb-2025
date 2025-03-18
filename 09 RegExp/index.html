@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Regular Expressions</h1>
+    <p>
+        A <strong>regular expression</strong> (shortened as regex or regexp; sometimes referred to as rational
+        expression) is <strong>
+            a sequence
+            of characters that specifies a match pattern in text
+        </strong>. Usually such patterns are used by string-searching
+        algorithms for "find" or "find and replace" operations on strings, or for input validation.<br>
+        For example: <code>[A-Z]\w{2,}!*</code>
+    </p>
+    <h2>Form Input Validation using Regular Expression</h2>
+    <form>
+        <label>
+            <span>Enter car number:</span>
+            <input pattern="[A-Z]{2}\d{4}[A-Z]{2}" type="text">
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="./main.js"></script>
+    <!-- <script src="./data_validation.js"></script> -->
+</body>
+
+</html>
