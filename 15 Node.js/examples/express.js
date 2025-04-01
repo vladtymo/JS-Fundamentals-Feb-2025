@@ -1,6 +1,6 @@
 // ---------- server logic ----------
-
 const fs = require('fs');
+const cors = require('cors');
 
 // connect express module
 const express = require('express'),
@@ -8,6 +8,10 @@ const express = require('express'),
 
 const hostname = 'localhost'; // 127.0.0.1
 const port = 4400;
+
+app.use(cors({
+    origin: 'http://127.0.0.1:5500' // allow all
+}));
 
 // GET: ~/api/contacts
 app.get("/api/contacts", (req, res) => {
