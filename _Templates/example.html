@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handlebars Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+</head>
+
+<body>
+    <!-- HTML шаблон -->
+    <script id="myTemplate" type="text/x-handlebars-template">
+        <tr>
+            <td>{{name}}</td>
+            <td>{{age}}</td>
+        </tr>
+        <div>{{content}}</div>
+    </script>
+
+    <!-- JavaScript -->
+    <script>
+        // Дані для шаблону
+        var data = { content: 'Привіт, світ!', name: "Vlad", age: 20 };
+
+        // Використання шаблону та додавання на сторінку
+        var source = document.getElementById('myTemplate').innerHTML;
+        var template = Handlebars.compile(source);
+        var html = template(data);
+
+        document.body.innerHTML += html;
+    </script>
+</body>
+
+</html>
