@@ -107,5 +107,5 @@ let main: Item;
 
 let items: Item[] = [34, 1, -1, "faewg", null];
 
-type User = { login: string, password: string, id: number };
-let active: User | null = null;
+// type User = { login: string, password: string, id: number };
+// let active: User | null = null;
