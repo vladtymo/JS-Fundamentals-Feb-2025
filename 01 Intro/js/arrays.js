@@ -3,8 +3,32 @@
 let array = [];
 // typeof: object
 
+let product1 = "Apple";
+let product2 = "Banana";
+let product3 = "Orange";
+
+let products = ["Apple", "Banana", "Orange"];
+
+console.log(products);
+
+products.sort();
+products.reverse();
+products.length; // 3
+
+console.log(product1);
+console.log(product2);
+console.log(product3);
+
 let colors = ["red", "green", "blue", "black"];
-const mixed = [120, null, "hello", true, [1, 2, 3], { id: 1002, title: "Super" }, () => { }];
+const mixed = [
+  120,
+  null,
+  "hello",
+  true,
+  [1, 2, 3],
+  { id: 1002, title: "Super" },
+  () => {},
+];
 
 console.log("Colors arr length: ", colors.length); // 4
 
@@ -32,14 +56,14 @@ console.log("Mixed arr length: ", mixed.length); // 7
 console.log("Is Array: ", Array.isArray(colors)); // true
 
 // ------------ methods
-colors.pop();           // remove last
-colors.push("purple");  // insert last
-colors.shift();         // remove first
-colors.unshift("brown");// insert first
+colors.pop(); // remove last
+colors.push("purple"); // insert last
+colors.shift(); // remove first
+colors.unshift("brown"); // insert first
 
 console.log("Colors: ", colors);
 
-let numbers = [4, 60, 1, -1, 0, -3, 99, -4, 120, 1, -4, 44, -10];
+let numbers = [4, 77, 60, 1, -1, 0, -3, 99, -4, 120, 1, -4, 44, -10];
 
 console.log("Numbers:", numbers);
 
@@ -47,13 +71,11 @@ console.log("Index of 1: ", numbers.indexOf(1)); // 2, if not found: -1
 console.log("Last Index of 1: ", numbers.lastIndexOf(1)); // 9
 
 if (numbers.indexOf(1) === numbers.lastIndexOf(1)) {
-    console.log("1 appears only once in array!");
+  console.log("1 appears only once in array!");
 }
 
-if (numbers.indexOf(120) !== -1)
-    console.log("Array contains 120 value!");
-else
-    console.log("Array does not contains 120 value!");
+if (numbers.indexOf(77) !== -1) console.log("Array contains 77 value!");
+else console.log("Array does not contains 77 value!");
 
 // TASK: find all indexes of '1'
 // let indexes = [];
@@ -83,7 +105,7 @@ console.log("After splice:", numbers);
 numbers.sort(); // lexicograph mode
 console.log("Sorted Numbers:", numbers);
 
-// comparison result: 
+// comparison result:
 // 0 - element are equals
 // <0 - 1st < 2st
 // >0 - 1st > 2st
@@ -93,20 +115,32 @@ console.log("Custom sort Numbers:", numbers);
 numbers.fill(7, 1, 3); // [1...3) - change original array
 console.log("Numbers:", numbers);
 
-console.log("Find of 1: ", numbers.find(x => x > 100));             // 120
-console.log("Find index of 1: ", numbers.findIndex(x => x > 100));  // 9
+console.log(
+  "Find of 1: ",
+  numbers.find((x) => x > 100)
+); // 120
+console.log(
+  "Find index of 1: ",
+  numbers.findIndex((x) => x > 100)
+); // 9
 
 // return copy array with true values
-console.log("Filtered: ", numbers.filter((x) => x < 0));
+console.log(
+  "Filtered: ",
+  numbers.filter((x) => x < 0)
+);
 
 // TASK: remove all elements '5'
-numbers = numbers.filter(x => x !== 5);
+numbers = numbers.filter((x) => x !== 5);
 
 // return copy array with mapped values
-console.log("Mapped:", numbers.map((x) => x + "$"));
+console.log(
+  "Mapped:",
+  numbers.map((x) => x + "$")
+);
 
-numbers.forEach(x => {
-    if (x > 10) console.log(x + '!');
+numbers.forEach((x) => {
+  if (x > 10) console.log(x + "!");
 });
 
 // // we can use method chain: method1().method2().method3().forEach() - X
@@ -124,7 +158,10 @@ console.log(res);
 
 // result: 10
 // current: 10
-const max = numbers.reduce((result, current) => result > current ? result : current, numbers[0]);
+const max = numbers.reduce(
+  (result, current) => (result > current ? result : current),
+  numbers[0]
+);
 console.log("Max: ", max); // 10
 
 // [r]ed + [g]reen + [b]lue = 'rgb'
