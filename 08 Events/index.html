@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .block {
+        font-weight: bold;
+        color: blue;
+        background-color: lightgray;
+        padding: 10px;
+        margin-bottom: 10px;
+        display: inline-block;
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
     <h1>Working with Events</h1>
 
+    <div class="block" onclick="alert('Hello Vlad!')" tabindex="0">
+      Hello Vlad!
+    </div>
+    <br />
+
     <!-- 1 - set event handlers using attribute -->
-    <button id="btn1" onclick="console.log('Clicked!')">Click Me! (using attribute)</button>
+    <button id="btn1" onclick="console.log('Clicked!')">
+      Click Me! (using attribute)
+    </button>
 
     <button id="btn2">Click Me! (using AddEventListener)</button>
 
     <button id="btn3">Click Me! (using onclick)</button>
 
     <div onclick="console.log('outer clicked!')" class="outer">
-        Outer block
-        <div onclick="console.log('inner clicked!')" class="inner">Inner Block</div>
+      Outer block
+      <div onclick="console.log('inner clicked!')" class="inner">
+        Inner Block
+      </div>
     </div>
 
     <p>Mouse coords: <span id="coords-text"></span></p>
 
-    <script src="./main.js"></script>
-</body>
-
+    <!-- <script src="./main.js"></script> -->
+    <script src="./example.js"></script>
+  </body>
 </html>

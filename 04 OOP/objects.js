@@ -166,3 +166,36 @@ let product2 = {
 let cart = [product1, product2];
 
 console.log("Price: ", cart[1].price, "$");
+
+// ---------------------------- classes
+
+class Product {
+  constructor(name, price, rating = null) {
+    this.name = name;
+    this.price = price;
+    this.rating = rating;
+    this.inStock = true;
+  }
+  // object methods
+  applyDiscount(value) {
+    // [this] - reference to this object
+    this.price -= (this.price / 100) * value;
+
+    // [this] = [product]
+    console.log("this in object scope:", this);
+  }
+  show() {
+    console.log(`Name: ${this.name} Price: ${this.price}$`);
+  }
+}
+
+let myProduct1 = new Product("Google Pixel 7", 799, 4.5);
+myProduct1.show();
+myProduct1.applyDiscount(10);
+myProduct1.show();
+
+let myProduct2 = new Product("Sony Xperia 1", 899);
+let myProduct3 = new Product("Nokia 3310", 59, 4.0);
+let myProduct4 = new Product("Huawei P50", 4500);
+
+myProduct3.show();
